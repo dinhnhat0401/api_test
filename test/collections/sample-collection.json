@@ -1,0 +1,63 @@
+{
+  "info": {
+    "name": "Sample",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "description": "Simple unit test for https://www.instagram.com/developer/endpoints/comments/"
+  },
+
+  "item": [{
+    "name": "A simple GET request",
+    "event": [{
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test('expect response be 200', function () {",
+          "    pm.response.to.be.ok",
+          "})",
+          "pm.test('expect response json contain data', function () {",
+          "    pm.expect(pm.response.json().data).to.have.property('created_time')",
+          "      .and.equal('1280780324')",
+          "})",
+          "pm.test('expect response json contain data', function () {",
+          "    pm.expect(pm.response.json().data).to.have.property('text')",
+          "      .and.equal('Really amazing photo!')",
+          "})"
+        ]
+      }
+    }],
+    "request": {
+      "url": "https://api.instagram.com/v1/media/{valid-media-id}/comments?access_token=VALID-ACCESS-TOKEN",
+      "method": "GET"
+    }
+  }, {
+    "name": "A simple POST request with JSON body",
+    "request": {
+      "url": "https://api.instagram.com/v1/media/{valid-media-id}/comments",
+      "method": "POST",
+      "header": [{
+        "key": "Content-Type",
+        "value": "application/json"
+      }],
+      "event": [{
+        "listen": "test",
+        "script": {
+          "type": "text/javascript",
+          "exec": [
+            "pm.test('expect response be 200', function () {",
+            "    pm.response.to.be.ok",
+            "})",
+            "pm.test('expect response json contain meta', function () {",
+            "    pm.expect(pm.response.json().meta).to.have.property('code')",
+            "      .and.equal('200')",
+            "})"
+          ]
+        }
+      }],
+      "body": {
+        "mode": "raw",
+        "raw": "{\"access_token\":\"VALID-ACCESS-TOKEN\", \"text\": \"This+is+my+comment\"}"
+      }
+    }
+  }]
+}

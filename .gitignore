@@ -1,0 +1,33 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+pids
+logs
+results
+tmp
+
+#Build
+public/assets/css/main.css
+public/assets/css/main.css.map
+public/assets/js/dist
+
+# API keys and secrets
+.env
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
