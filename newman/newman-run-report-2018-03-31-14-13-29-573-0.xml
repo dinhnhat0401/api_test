@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Postman Echo" time="10.352">
+  <testsuite name="Request Methods / GET Request" id="a66794d5-a0af-47a0-90aa-c95d2322baf3" tests="2" time="0.939">
+    <testcase name="response is ok" time="0.939"/>
+    <testcase name="response body has json with request queries" time="0.939"/>
+  </testsuite>
+  <testsuite name="Request Methods / POST Raw Text" id="c833cc5e-c045-401b-96da-bd70b5dfa780" tests="2" time="0.194">
+    <testcase name="response is ok" time="0.194"/>
+    <testcase name="response body has json with request body" time="0.194"/>
+  </testsuite>
+  <testsuite name="Request Methods / POST Form Data" id="e949b4c9-2cde-4c15-9aa5-b4a26c3c068e" tests="2" time="0.19">
+    <testcase name="response is ok" time="0.19"/>
+    <testcase name="response body has json with form data" time="0.19"/>
+  </testsuite>
+  <testsuite name="Request Methods / PUT Request" id="2c9e09b6-7450-4609-84e2-a0761cad61db" tests="2" time="0.192">
+    <testcase name="response is ok" time="0.192"/>
+    <testcase name="response body has json with form data" time="0.192"/>
+  </testsuite>
+  <testsuite name="Request Methods / PATCH Request" id="b9c27c27-0400-4780-9949-fd9ebdb2406c" tests="2" time="0.193">
+    <testcase name="response is ok" time="0.193"/>
+    <testcase name="response body has json with form data" time="0.193"/>
+  </testsuite>
+  <testsuite name="Request Methods / DELETE Request" id="b6b055ca-4e43-4e09-b237-e4761bb81d12" tests="2" time="0.199">
+    <testcase name="response is ok" time="0.199"/>
+    <testcase name="response body has json with form data" time="0.199"/>
+  </testsuite>
+  <testsuite name="Headers / Request Headers" id="1e7e59b8-2191-4a06-abb2-f35747f69e3a" tests="2" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="sample request header should be returned in response body" time="0.189"/>
+  </testsuite>
+  <testsuite name="Headers / Response Headers" id="cb91e22a-f650-4f93-a7f2-b09a11c94bce" tests="3" time="0.246">
+    <testcase name="response is ok" time="0.246"/>
+    <testcase name="response has the headers sent as part of request query" time="0.246"/>
+    <testcase name="sample request param should be returned in response body" time="0.246"/>
+  </testsuite>
+  <testsuite name="Authentication Methods / Basic Auth" id="fc566bc6-e11e-4b69-98e5-1c72431413b8" tests="2" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="response body has json saying 'authenticated'" time="0.189"/>
+  </testsuite>
+  <testsuite name="Authentication Methods / DigestAuth Success" id="384f5582-e681-4e35-9963-3a68742db11d" tests="2" time="0.189">
+    <testcase name="response code is 200" time="0.189"/>
+    <testcase name="body contains authenticated" time="0.189"/>
+  </testsuite>
+  <testsuite name="Authentication Methods / Hawk Auth" id="3a9a1674-1574-4a72-914c-e4c137940dac" tests="2" time="0.19">
+    <testcase name="response is ok" time="0.19"/>
+    <testcase name="response body has json saying passed 'status'" time="0.19">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Authentication Methods / OAuth1.0 (verify signature)" id="8baf8505-3767-4ee3-94a2-cee70cb981bc" tests="2" time="0.282">
+    <testcase name="response is ok" time="0.282"/>
+    <testcase name="response body has json saying passed 'status'" time="0.282"/>
+  </testsuite>
+  <testsuite name="Cookie Manipulation / Set Cookies" id="ff9784cf-b2d2-4c14-b656-61d7eb800c71" tests="4" time="0.385">
+    <testcase name="response should be 200 or 302" time="0.385"/>
+    <testcase name="the &quot;foo1&quot; cookie has correct value" time="0.385"/>
+    <testcase name="the &quot;foo2&quot; cookie has correct value" time="0.385"/>
+    <testcase name="response body should be valid" time="0.385"/>
+  </testsuite>
+  <testsuite name="Cookie Manipulation / Get Cookies" id="4ac3a32f-490e-43e8-bd32-83d41438fbf0" tests="4" time="0.196">
+    <testcase name="response is ok" time="0.196"/>
+    <testcase name="the &quot;foo1&quot; cookie has correct value" time="0.196"/>
+    <testcase name="the &quot;foo2&quot; cookie has correct value" time="0.196"/>
+    <testcase name="response body should be valid" time="0.196"/>
+  </testsuite>
+  <testsuite name="Cookie Manipulation / Delete Cookies" id="5e399d49-f6e6-422a-b63a-e35499f93f62" tests="4" time="0.38">
+    <testcase name="response should be 200 or 302" time="0.38"/>
+    <testcase name="the &quot;foo1&quot; cookie should not be present" time="0.38"/>
+    <testcase name="the &quot;foo2&quot; cookie should not be present" time="0.38"/>
+    <testcase name="response body should be valid" time="0.38"/>
+  </testsuite>
+  <testsuite name="Utilities / Response Status Code" id="aa90e720-eaff-4bfa-be84-c1d547356972" tests="3" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="response has valid json body" time="0.189"/>
+    <testcase name="status in response body must match the one in request" time="0.189"/>
+  </testsuite>
+  <testsuite name="Utilities / Streamed Response" id="e5d21805-d14b-4a19-b240-f314f876b367" tests="2" time="0.188">
+    <testcase name="response is ok" time="0.188"/>
+    <testcase name="response has chunked transfer encoding header" time="0.188"/>
+  </testsuite>
+  <testsuite name="Utilities / Delay Response" id="c2083a0a-4556-4837-aa59-0edc636d0312" tests="4" time="2.19">
+    <testcase name="response is ok" time="2.19"/>
+    <testcase name="response has valid json body" time="2.19"/>
+    <testcase name="request must have a valid delay" time="2.19"/>
+    <testcase name="response should take more time than the delay specified" time="2.19"/>
+  </testsuite>
+  <testsuite name="Utilities / Get UTF8 Encoded Response" id="29d29021-46cb-4798-a8ab-38814993f9b7" tests="3" time="0.193">
+    <testcase name="response is ok" time="0.193"/>
+    <testcase name="response has charset in content-type header" time="0.193"/>
+    <testcase name="response has chunked transfer encoding header" time="0.193"/>
+  </testsuite>
+  <testsuite name="Utilities / GZip Compressed Response" id="e3d3aae6-6e77-4781-9a3f-d3d87f7ecbd0" tests="4" time="0.19">
+    <testcase name="response is ok" time="0.19"/>
+    <testcase name="response has valid json body" time="0.19"/>
+    <testcase name="response headers should indicate valid content encoding" time="0.19"/>
+    <testcase name="requesting http client should accept compressed response" time="0.19"/>
+  </testsuite>
+  <testsuite name="Utilities / Deflate Compressed Response" id="d1358fb9-3dd7-47e1-8568-ea8a39f7bd4f" tests="4" time="0.192">
+    <testcase name="response is ok" time="0.192"/>
+    <testcase name="response has valid json body" time="0.192"/>
+    <testcase name="response headers should indicate valid content encoding" time="0.192"/>
+    <testcase name="requesting http client should accept compressed response" time="0.192"/>
+  </testsuite>
+  <testsuite name="Utilities / IP address in JSON format" id="ad44d10d-15b5-4f61-b5ab-129295580178" tests="3" time="0.188">
+    <testcase name="response is ok" time="0.188"/>
+    <testcase name="response has valid json body" time="0.188"/>
+    <testcase name="response must return a valid ip address" time="0.188"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Current UTC time" id="2e4ebc06-1325-4f35-8488-61c7c7f41690" tests="2" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="response time matches server response 'date' header" time="0.189"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Timestamp validity" id="d1a431dd-9cc1-4715-9fd9-4d11b17d6267" tests="2" time="0.188">
+    <testcase name="response is ok" time="0.188"/>
+    <testcase name="response json should say whether request query time is valid" time="0.188"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Format timestamp" id="4173b670-84c4-4f00-8067-8ef4d28b6e1a" tests="2" time="0.191">
+    <testcase name="response is ok" time="0.191"/>
+    <testcase name="response json should say whether request query time is valid" time="0.191"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Extract timestamp unit" id="60657c72-8eab-4441-9e18-779d8776598f" tests="2" time="0.192">
+    <testcase name="response is ok" time="0.192"/>
+    <testcase name="response json should say whether request query unit is valid" time="0.192"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Time addition" id="c3275b4d-060c-4861-965b-24b3cced477a" tests="2" time="0.203">
+    <testcase name="response is ok" time="0.203"/>
+    <testcase name="response json should return the added years" time="0.203"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Time subtraction" id="676cd5d9-9c00-4dd3-984a-aef190f41153" tests="2" time="0.188">
+    <testcase name="response is ok" time="0.188"/>
+    <testcase name="response json should return the subtracted years" time="0.188"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Start of time" id="214704a6-f6b5-4fa9-ad22-5a70ce8a2e8e" tests="2" time="0.188">
+    <testcase name="response is ok" time="0.188"/>
+    <testcase name="response json should return the beginning of month" time="0.188"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Object representation" id="022981ca-c06f-4c3e-9e74-b21a0c5fce40" tests="2" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="response json should return the date components" time="0.189"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Before comparisons" id="945644e7-e0c0-4def-8ccd-19381d70fa56" tests="2" time="0.193">
+    <testcase name="response is ok" time="0.193"/>
+    <testcase name="response json should say timestamp is before target" time="0.193"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / After comparisons" id="f0eb0ddc-2878-43d0-aa92-65a49f3fbcd7" tests="2" time="0.19">
+    <testcase name="response is ok" time="0.19"/>
+    <testcase name="response json should say timestamp is not after target" time="0.19"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Between timestamps" id="a09078c9-47e2-4739-829c-361289865c0c" tests="2" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="response json should say timestamp is not between start and end" time="0.189"/>
+  </testsuite>
+  <testsuite name="Utilities / Date and Time / Leap year check" id="c6cb4c34-68ce-45be-ae5e-d08027386bcd" tests="2" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="response json should say timestamp is within leap year" time="0.189"/>
+  </testsuite>
+  <testsuite name="Utilities / Postman Collection / Transform collection from format v1 to v2" id="e3bd8adc-f13d-4e2b-91f2-4a07f7a9c52f" tests="2" time="0.195">
+    <testcase name="response is ok" time="0.195"/>
+    <testcase name="response has almost valid items" time="0.195"/>
+  </testsuite>
+  <testsuite name="Utilities / Postman Collection / Transform collection from format v2 to v1" id="a7d19fd9-70d0-4c8d-b192-f2c057001ebb" tests="2" time="0.189">
+    <testcase name="response is ok" time="0.189"/>
+    <testcase name="response has almost valid items" time="0.189"/>
+  </testsuite>
+  <testsuite name="Auth: Digest / DigestAuth Request" id="4611a861-728b-4d89-af1c-6b6e75753109" tests="2" time="0.196">
+    <testcase name="response code is 401" time="0.196"/>
+    <testcase name="response has WWW-Authenticate header" time="0.196"/>
+  </testsuite>
+</testsuites>
